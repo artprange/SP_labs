@@ -1,0 +1,23 @@
+#chat-icon {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#chatbox {
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#user-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,24 @@
+.chat-window {
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.bot-message {
+  background-color: #e0e0e0;
+  align-self: flex-end;
+}

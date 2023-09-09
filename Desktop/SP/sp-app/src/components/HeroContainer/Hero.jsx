@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import LargeBtn from "../UI/LargeButton/LargeBtn";
 import NavBar from "../NavBarContainer/NavBar";
 import "./styles.scss";
+import chatIcon from "../assets/chat-icon.png";
+import Chat from "../ChatContainer/Chat";
 
 function Hero() {
+  const [isChatboxOpen, setIsChatboxOpen] = useState(false);
+
+  const handleChatIconClick = () => {
+    setIsChatboxOpen(!isChatboxOpen); // Toggle the visibility
+  };
+
   return (
     <div className="hero-container">
       <NavBar />
@@ -14,6 +22,13 @@ function Hero() {
         </h1>
         <h5>Porque não basta resolver os conflitos do mundo do direito.</h5>
         <LargeBtn text={"Inicie sua jornada"} />
+        <img
+          src={chatIcon}
+          alt="chat"
+          onClick={handleChatIconClick}
+          style={{ cursor: "pointer" }} // Add cursor style for the chat icon
+        />
+        {isChatboxOpen && <Chat />} {/* Conditionally render ChatComponent */}
       </div>
     </div>
   );
