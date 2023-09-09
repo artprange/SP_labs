@@ -1,9 +1,11 @@
 import React from "react";
-import { solutions } from "../utils/constants";
 import SmallBtn from "../UI/SmallButton/SmallBtn";
 import "./styles.scss";
+import CasesData from "../ApiData/CasesData";
 
 function MainSection() {
+  const cases = CasesData();
+
   return (
     <div className="main-section">
       <h1>
@@ -14,10 +16,10 @@ function MainSection() {
       <h6>Confira nossos cases de sucesso que vão além do mundo jurídico.</h6>
       <div className="main-section__container">
         <div className="main-section__container__cards">
-          {solutions.map((solution) => (
+          {cases.map((solution) => (
             <div key={solution.id} className="main-section__solutions">
               <h3>{solution.title}</h3>
-              <p>{solution.text}</p>
+              <p>{solution.description}</p>
               <SmallBtn text={"Saiba Mais"} />
             </div>
           ))}

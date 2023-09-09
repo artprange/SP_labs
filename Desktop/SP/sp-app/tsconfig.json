@@ -36,7 +36,8 @@
     "src/components/VideoContainer/video.jsx",
     "src/components/AboutContainer/About.jsx",
     "src/components/FooterContainer/Footer.jsx",
-    "src/components/UI/BtnLarge.jsx"
+    "src/components/UI/BtnLarge.jsx",
+    "src/components/utils/constants.jsx"
   ],
   "exclude": ["node_modules"]
 }

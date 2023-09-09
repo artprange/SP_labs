@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import LargeBtn from "../UI/LargeButton/LargeBtn";
+import "./styles.scss";
+import downArrow from "../assets/chevron-down.svg";
 
 class MyForm extends Component {
   constructor(props) {
@@ -30,74 +32,86 @@ class MyForm extends Component {
     return (
       <div className="form-container">
         <h1>Não fique parado, fale conosco</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="name">Seu nome</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Seu email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="segment">Seu segmento</label>
-            <select
-              id="segment"
-              name="segment"
-              value={this.state.segment}
-              onChange={this.handleChange}
-              required
-            >
-              <option value="">Seu segmento</option>
-              <option value="Option 1">Segmento 1</option>
-              <option value="Option 2">Segmento 2</option>
-              <option value="Option 3">Segmento 3</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="message">Fale um pouco osbre seu negócio</label>
-            <input
-              type="text"
-              id="message"
-              name="message"
-              value={this.state.message}
-              onCHange={this.handleChange}
-              required
-            ></input>
-          </div>
-          <div>
-            <label>
+        <div className="form-container__inputs">
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <label htmlFor="name"></label>
               <input
-                type="checkbox"
-                name="agreeToTerms"
-                checked={this.state.agreeToTerms}
+                placeholder="Seu nome"
+                type="text"
+                id="name"
+                name="name"
+                value={this.state.name}
                 onChange={this.handleChange}
                 required
               />
-              Declaro que conheço a Política de Privacidade e autorizo a
-              utilização das minhas informações pelo SP Labs
-            </label>
-            <LargeBtn
-              className="btn-large"
-              type="submit"
-              text={"Enviar"}
-            ></LargeBtn>
-          </div>
-        </form>
+            </div>
+            <div>
+              <label htmlFor="email"></label>
+              <input
+                placeholder="Seu Email"
+                type="email"
+                id="email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="segment">
+                <img
+                  src={downArrow}
+                  alt="dropdown arrow"
+                  className="icon"
+                ></img>
+              </label>
+              <select
+                placeholder="Seu Segmento"
+                id="segment"
+                name="segment"
+                value={this.state.segment}
+                onChange={this.handleChange}
+                required
+              >
+                <option value="">Seu segmento</option>
+                <option value="Option 1">Segmento 1</option>
+                <option value="Option 2">Segmento 2</option>
+                <option value="Option 3">Segmento 3</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="message"></label>
+              <input
+                placeholder="Fale um pouco osbre seu negócio"
+                type="text"
+                id="message"
+                name="message"
+                value={this.state.message}
+                onCHange={this.handleChange}
+                required
+              ></input>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="agreeToTerms"
+                  checked={this.state.agreeToTerms}
+                  onChange={this.handleChange}
+                  required
+                />
+                Declaro que conheço a Política de Privacidade e autorizo a
+                utilização das minhas informações pelo SP Labs
+              </label>
+              <LargeBtn
+                className="btn-large"
+                type="submit"
+                text={"Enviar"}
+              ></LargeBtn>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
