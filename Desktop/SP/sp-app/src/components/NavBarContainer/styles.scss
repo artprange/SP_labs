@@ -1,0 +1,26 @@
+.navbar-container {
+  padding: 32px;
+  align-items: center;
+  width: 1080px;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-start;
+  gap: 876px;
+}
+.navbar-container__text {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  color: #fff;
+  margin-right: -100px;
+}
+
+.navbar__logo {
+  margin-left: 100px;
+  width: 63px;
+  height: 46px;
+}
+h3:hover {
+  text-decoration: underline;
+  cursor: default;
+}

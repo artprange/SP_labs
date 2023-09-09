@@ -1,0 +1,32 @@
+$btn-std-color: #5dfed6;
+$btn-hover-color: #45e6bf;
+$dark-grey: #343434;
+$avg-grey: #c4c4c4;
+$light-grey: #e5e5e5;
+$super-light-grey: #efefef;
+$white: #fff;
+
+.small-btn {
+  display: inline-flex;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--Cinza, #c4c4c4);
+  position: relative;
+  cursor: default;
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: translateX(5px);
+  }
+
+  &:hover {
+    border-radius: 4px;
+    border: 1px solid var(--dark-grey, #343434);
+  }
+}

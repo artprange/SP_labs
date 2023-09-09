@@ -1,0 +1,67 @@
+$btn-std-color: #5dfed6;
+$btn-hover-color: #45e6bf;
+$dark-grey: #343434;
+$avg-grey: #c4c4c4;
+$light-grey: #e5e5e5;
+$super-light-grey: #efefef;
+$white: #fff;
+
+.large-button {
+  background-color: $btn-std-color;
+  text-transform: uppercase;
+  line-height: 21px;
+  letter-spacing: 0.2rem;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: default;
+  color: var(--Cinza-Escuro, #343434);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: #0056b3;
+  }
+}
+
+.input {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.input label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: #4f005f;
+}
