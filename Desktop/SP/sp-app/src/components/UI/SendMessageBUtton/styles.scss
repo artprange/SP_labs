@@ -1,0 +1,24 @@
+$btn-std-color: #5dfed6;
+$btn-hover-color: #45e6bf;
+$dark-grey: #343434;
+$avg-grey: #c4c4c4;
+$light-grey: #e5e5e5;
+$super-light-grey: #efefef;
+$white: #fff;
+
+.send-btn {
+  display: flex;
+  width: 50px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: var(--Verde-Claro, #5dfed6);
+
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #45e6bf;
+}

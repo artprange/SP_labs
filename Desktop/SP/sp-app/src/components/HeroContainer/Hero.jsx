@@ -26,9 +26,10 @@ function Hero() {
           src={chatIcon}
           alt="chat"
           onClick={handleChatIconClick}
-          style={{ cursor: "pointer" }} // Add cursor style for the chat icon
+          style={{ cursor: "pointer" }}
+          className="chat-icon"
         />
-        {isChatboxOpen && <Chat />} {/* Conditionally render ChatComponent */}
+        {isChatboxOpen && <Chat />}
       </div>
     </div>
   );

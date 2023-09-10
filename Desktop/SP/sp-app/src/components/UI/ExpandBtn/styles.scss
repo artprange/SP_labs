@@ -1,0 +1,17 @@
+$btn-std-color: #5dfed6;
+$btn-hover-color: #45e6bf;
+$dark-grey: #343434;
+$avg-grey: #c4c4c4;
+$light-grey: #e5e5e5;
+$super-light-grey: #efefef;
+$white: #fff;
+
+.expand-btn {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #efefef;
+}
