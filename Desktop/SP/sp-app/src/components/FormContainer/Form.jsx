@@ -22,36 +22,36 @@ class MyForm extends Component {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://sp-labs.vercel.app/api/chat", {
+      const requestData = {
+        name: this.state.name,
+      };
+
+      const response = await fetch("https://sp-labs.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(this.state),
+        body: JSON.stringify(requestData),
       });
 
       if (!response.ok) {
         throw new Error(`API request failed with status: ${response.status}`);
       }
 
-      const responseData = await response.json();
+      const responseData = await response.text();
 
-      // Set the fetched data to the state
       this.setState({ modalData: responseData });
 
-      // Open the modal
       this.openModal();
     } catch (error) {
       console.error("API request error:", error.message);
     }
   };
 
-  // Open the modal
   openModal = () => {
     this.setState({ isModalOpen: true });
   };
 
-  // Close the modal
   closeModal = () => {
     this.setState({ isModalOpen: false });
   };
