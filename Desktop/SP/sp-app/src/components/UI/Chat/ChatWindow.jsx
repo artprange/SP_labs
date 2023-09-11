@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
 
-const ChatWindow = ({ messages }) => {
+const ChatWindow = ({ messages, isChatExpanded }) => {
   return (
-    <div className="chat-window">
+    <div className={`chat-window ${isChatExpanded ? "expanded" : ""}`}>
       <div className="message-wrapper">
         {messages.map((message, index) => (
           <div
