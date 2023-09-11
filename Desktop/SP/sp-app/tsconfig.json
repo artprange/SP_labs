@@ -37,7 +37,8 @@
     "src/components/AboutContainer/About.jsx",
     "src/components/FooterContainer/Footer.jsx",
     "src/components/UI/BtnLarge.jsx",
-    "src/components/utils/constants.jsx"
+    "src/components/utils/constants.jsx",
+    "src/components/ModalComponentContainer/Modal.jsx"
   ],
   "exclude": ["node_modules"]
 }

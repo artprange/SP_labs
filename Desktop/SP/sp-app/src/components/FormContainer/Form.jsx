@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LargeBtn from "../UI/LargeButton/LargeBtn";
 import "./styles.scss";
 import downArrow from "../assets/chevron-down.svg";
+import Modal from "../ModalComponentContainer/Modal";
 
 class MyForm extends Component {
   constructor(props) {
@@ -12,20 +13,54 @@ class MyForm extends Component {
       segment: "",
       message: "",
       agreeToTerms: false,
+      isModalOpen: false,
+      modalData: "",
     };
   }
+
+  handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("https://sp-labs.vercel.app/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.state),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed with status: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+
+      // Set the fetched data to the state
+      this.setState({ modalData: responseData });
+
+      // Open the modal
+      this.openModal();
+    } catch (error) {
+      console.error("API request error:", error.message);
+    }
+  };
+
+  // Open the modal
+  openModal = () => {
+    this.setState({ isModalOpen: true });
+  };
+
+  // Close the modal
+  closeModal = () => {
+    this.setState({ isModalOpen: false });
+  };
 
   handleChange = (event) => {
     const { name, value, type, checked } = event.target;
     this.setState({
       [name]: type === "checkbox" ? checked : value,
     });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    // You can handle form submission logic here
-    console.log("Form data submitted:", this.state);
   };
 
   render() {
@@ -81,16 +116,15 @@ class MyForm extends Component {
               </select>
             </div>
             <div>
-              <label htmlFor="message"></label>
               <input
-                placeholder="Fale um pouco osbre seu negócio"
+                placeholder="Fale um pouco sobre seu negócio"
                 type="text"
                 id="message"
                 name="message"
                 value={this.state.message}
-                onCHange={this.handleChange}
+                onChange={this.handleChange}
                 required
-              ></input>
+              />
             </div>
             <div>
               <label>
@@ -110,6 +144,11 @@ class MyForm extends Component {
                 text={"Enviar"}
               ></LargeBtn>
             </div>
+            <Modal
+              isOpen={this.state.isModalOpen}
+              closeModal={this.closeModal}
+              data={this.state.modalData}
+            />
           </form>
         </div>
       </div>
