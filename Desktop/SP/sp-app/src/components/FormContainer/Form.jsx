@@ -132,8 +132,8 @@ class MyForm extends Component {
                 required
               /> */}
             </div>
-            <div>
-              <label>
+            <div className="privacy-policy-container">
+              <label className="privacy-policy__checkbox">
                 <input
                   type="checkbox"
                   name="agreeToTerms"
@@ -141,15 +141,15 @@ class MyForm extends Component {
                   onChange={this.handleChange}
                   required
                 />
+              </label>
+              <p>
+                {" "}
                 Declaro que conheço a Política de Privacidade e autorizo a
                 utilização das minhas informações pelo SP Labs
-              </label>
-              <LargeBtn
-                className="btn-large"
-                type="submit"
-                text={"Enviar"}
-              ></LargeBtn>
+              </p>
             </div>
+            <LargeBtn type="submit" text={"Enviar"}></LargeBtn>
+
             <Modal
               isOpen={this.state.isModalOpen}
               closeModal={this.closeModal}

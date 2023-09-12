@@ -61,5 +61,37 @@
   line-height: 150%; /* 24px */
 }
 
-.form {
+.privacy-policy-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  align-self: stretch;
+  p {
+    color: var(--gray-inverse-9, #000);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+}
+
+.privacy-policy__checkbox {
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.large-button {
+  width: 320px;
+  display: flex;
+  padding: 12px 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: var(--Verde-Claro, #5dfed6);
 }
