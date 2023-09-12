@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LargeBtn from "../UI/LargeButton/LargeBtn";
 import "./styles.scss";
-import downArrow from "../assets/chevron-down.svg";
 import Modal from "../ModalComponentContainer/Modal";
 
 class MyForm extends Component {
@@ -66,6 +65,7 @@ class MyForm extends Component {
   render() {
     return (
       <div className="form-container">
+        <span className="form-container__background__blur"></span>
         <h1>Não fique parado, fale conosco</h1>
         <div className="form-container__inputs">
           <form onSubmit={this.handleSubmit}>
@@ -94,13 +94,7 @@ class MyForm extends Component {
               />
             </div>
             <div>
-              <label htmlFor="segment">
-                <img
-                  src={downArrow}
-                  alt="dropdown arrow"
-                  className="icon"
-                ></img>
-              </label>
+              <label htmlFor="segment"></label>
               <select
                 placeholder="Seu Segmento"
                 id="segment"
@@ -116,7 +110,8 @@ class MyForm extends Component {
               </select>
             </div>
             <div>
-              <input
+              <textarea
+                className="form_text"
                 placeholder="Fale um pouco sobre seu negócio"
                 type="text"
                 id="message"
@@ -124,7 +119,18 @@ class MyForm extends Component {
                 value={this.state.message}
                 onChange={this.handleChange}
                 required
-              />
+              ></textarea>
+
+              {/* <input
+                className="form_text"
+                placeholder="Fale um pouco sobre seu negócio"
+                type="text"
+                id="message"
+                name="message"
+                value={this.state.message}
+                onChange={this.handleChange}
+                required
+              /> */}
             </div>
             <div>
               <label>

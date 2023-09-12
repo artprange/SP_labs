@@ -5,12 +5,13 @@ const CustomVideo = () => {
   return (
     <div>
       <iframe
-        width="512"
-        height="297"
-        src="https://www.youtube.com/embed/Sagg08DrO5U"
-        title="YouTube Video"
-        frameBorder="0"
-        allowFullScreen
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/xE21yuS6gSY?si=VbZYIf9r4GUojBIa"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
       ></iframe>
     </div>
   );

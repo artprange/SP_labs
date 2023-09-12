@@ -36,6 +36,9 @@
   .chat-icon {
     margin-left: 1230px;
     margin-top: 256px;
+    &:hover {
+      color: #45e6bf;
+    }
   }
 }
 
