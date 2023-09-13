@@ -100,3 +100,12 @@ code {
     url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap")
       format("woff");
 }
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Inter"), local("Inter"),
+    url("https://fonts.googleapis.com/css2?family=Inter&display=swap")
+      format("woff");
+}

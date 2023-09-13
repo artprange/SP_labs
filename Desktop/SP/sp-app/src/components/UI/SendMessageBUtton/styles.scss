@@ -14,11 +14,14 @@ $white: #fff;
   align-items: center;
   gap: 10px;
   border-radius: 16px;
-  background: var(--Verde-Claro, #5dfed6);
+  border: none;
+  margin: 5px;
+  background-color: #45e6bf;
 
-  transition: background-color 0.3s ease;
+  background-image: url("../../assets/send-btn__default.svg");
 }
 
 .send-btn:hover {
   background-color: #45e6bf;
+  background-image: url("../../assets/send-btn__hover.svg");
 }

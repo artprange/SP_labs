@@ -11,80 +11,70 @@
   flex-shrink: 0;
   border-radius: 32px;
   border: 1px solid var(--Cinza-Escuro, #343434);
+  background-color: #fff;
 
-  background: #fff;
-}
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
-.chat-input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+  .chat-window__header {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
-.chat-window.expanded {
-  height: 700px;
-}
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: -300px;
+  }
 
-.chat-window__header {
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  .help-text {
+    width: 322px;
+    margin-right: 30px;
 
-  align-items: flex-start;
-  align-self: stretch;
-  margin-top: -300px;
-}
+    h5 {
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 64px; /* 320% */
+      margin-left: 15px;
+    }
+  }
 
-.help-text {
-  width: 322px;
-  margin-right: 40px;
+  .line-element {
+    width: 354px;
+    height: 1px;
+    background-color: #343434;
+  }
+  .chat-input__container {
+    width: 354px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+  }
 
-  h5 {
+  .chat-input__message {
+    padding: 0px 16px;
+    flex: 1;
+    border-radius: 16px;
+    border: 1px solid var(--Cinza, #c4c4c4);
+    height: 40px;
+  }
+
+  .chat-input {
+    width: 296px;
+    height: 15px;
+    align-self: stretch;
     color: #000;
-    font-size: 20px;
+
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 64px; /* 320% */
-    margin-left: 15px;
+    line-height: normal;
   }
-}
-.line-element {
-  width: 354px;
-  height: 1px;
-  background: #343434;
-}
-
-.chat-input__message {
-  display: flex;
-  padding: 0px 16px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  flex: 1 0 0;
-  align-self: stretch;
-  border-radius: 16px;
-  border: 1px solid var(--Cinza, #c4c4c4);
-}
-
-.chat-input__container {
-  width: 354px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 150px;
-}
-
-.chat-input {
-  width: 296px;
-  height: 15px;
-
-  align-self: stretch;
-  color: #000;
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }

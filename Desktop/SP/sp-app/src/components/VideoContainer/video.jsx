@@ -7,7 +7,7 @@ const CustomVideo = () => {
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/xE21yuS6gSY?si=VbZYIf9r4GUojBIa"
+        src="https://www.youtube.com/embed/IdkCEioCp24?si=hEICzuomxG7Ori4Y&amp;start=71"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

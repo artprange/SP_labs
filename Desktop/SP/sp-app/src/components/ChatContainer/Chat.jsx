@@ -57,7 +57,7 @@ const Chat = ({ isOpen }) => {
       <section className="help-text">
         <h5> 🖖 Como posso ajudar?</h5>
       </section>
-      <span className="line-element"></span>
+      <span className="line-element">.</span>
 
       <div className="chat-input__container">
         <input
