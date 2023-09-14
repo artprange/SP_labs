@@ -9,9 +9,9 @@ function NavBar() {
         <img src={logo} alt="SPlabs" className="navbar__logo" />
       </div>
       <div className="navbar-container__text">
-        <h3>Cases</h3>
+        <a href="#">Cases</a>
 
-        <h3>Contato</h3>
+        <a href="#">Contato</a>
       </div>
     </div>
   );

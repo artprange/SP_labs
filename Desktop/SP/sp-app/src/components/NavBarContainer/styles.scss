@@ -13,6 +13,10 @@
   gap: 32px;
   color: #fff;
   margin-right: -100px;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .navbar__logo {
@@ -20,7 +24,26 @@
   width: 63px;
   height: 46px;
 }
-h3:hover {
-  text-decoration: underline;
-  cursor: default;
+
+@media only screen and (max-width: 390px) {
+  .navbar-container {
+    display: flex;
+    width: 330px;
+    height: 43.561px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .navbar-container__text {
+    position: absolute;
+    margin-left: 190px;
+    margin-top: 50px;
+  }
+
+  .navbar__logo {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 63px;
+    height: 46px;
+  }
 }
