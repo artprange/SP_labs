@@ -19,7 +19,7 @@ function Hero() {
           <span className="evolua-text">evolua</span>
         </h1>
         <h5>Porque não basta resolver os conflitos do mundo do direito.</h5>
-        <LargeBtn text={"Inicie sua jornada"} />
+        <LargeBtn className="hero-btn" text={"Inicie sua jornada"} />
         <button
           type="button"
           alt="chat"
