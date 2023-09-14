@@ -8,7 +8,7 @@ import Chat from "../ChatContainer/Chat";
 function Hero() {
   const [isChatboxOpen, setIsChatboxOpen] = useState(false);
   const handleChatIconClick = () => {
-    setIsChatboxOpen(!isChatboxOpen); // Toggle the visibility
+    setIsChatboxOpen(!isChatboxOpen); 
   };
   return (
     <div className="hero-container">
