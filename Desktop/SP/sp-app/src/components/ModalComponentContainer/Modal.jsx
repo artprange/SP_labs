@@ -4,7 +4,7 @@ import X from "../../components/assets/x.svg";
 
 const Modal = ({ isOpen, closeModal, data }) => {
   if (!isOpen) {
-    return null; // Return null to hide the modal if isOpen is false
+    return null;
   }
 
   return (

@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const CustomVideo = () => {
   return (
-    <div>
+    <div className="video-container">
       <iframe
         width="560"
         height="315"

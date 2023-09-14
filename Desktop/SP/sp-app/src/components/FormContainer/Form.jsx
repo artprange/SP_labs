@@ -148,7 +148,7 @@ class MyForm extends Component {
                 utilização das minhas informações pelo SP Labs
               </p>
             </div>
-            <LargeBtn type="submit" text={"Enviar"}></LargeBtn>
+            <LargeBtn className="btn" type="submit" text={"Enviar"}></LargeBtn>
 
             <Modal
               isOpen={this.state.isModalOpen}

@@ -1,0 +1,13 @@
+@media screen and (max-width: 390px) {
+  .video-container {
+    display: flex;
+    width: 330px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+    iframe {
+      width: 330px;
+      height: 191px;
+    }
+  }
+}
